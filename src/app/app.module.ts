@@ -6,6 +6,8 @@ import {LoginpageModule} from './loginpage/loginpage.module';
 import { AppComponent } from './app.component';
 import {appRoutes} from './app.routing';
 import { RouterModule, Routes } from '@angular/router';
+import {DataService} from './dataservice'
+import {UrlConstant} from './urlConstants'
 @NgModule({
   declarations: [
     AppComponent
@@ -20,6 +22,7 @@ import { RouterModule, Routes } from '@angular/router';
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
+  providers:[DataService,UrlConstant],
   bootstrap: [AppComponent],
   exports:[LoginpageModule]
 })
